@@ -43,7 +43,7 @@ if [ -z "${OPENSHIFT_USER}" ] || [ -z "${OPENSHIFT_PASS}" ]; then
   export OPENSHIFT_USER=admin
   export OPENSHIFT_PASS=admin
 
-  while [[ $(oc get deploy oauth-openshift -o jsonpath='{ .status.readyReplicas}') != $(oc get deploy oauth-openshift -o jsonpath='{ .status.replicas}') ]]
+  while [[ $(oc get deploy oauth-openshift -o jsonpath='{ .status.readyReplicas}' -n openshift-authentication) != $(oc get deploy oauth-openshift -o jsonpath='{ .status.replicas}' -n openshift-authentication) ]]
   do
     echo "Wait 5sec for oauth server"
     sleep 5
