@@ -30,7 +30,7 @@ function test_ods_ci() {
     os::cmd::expect_success "oc project redhat-ods-applications"
     ODH_JUPYTERHUB_URL="https://"$(oc get route jupyterhub -o jsonpath='{.spec.host}' -n redhat-ods-applications)
     pushd ${HOME}/src/ods-ci
-    os::cmd::expect_success "run_robot_test.sh --test-artifact-dir ${ARTIFACT_DIR} --test-case ${MY_DIR}/../resources/ods-ci/integration-test-jupyter-git-notebook.robot --test-variables-file ${MY_DIR}/../resources/ods-ci/test-variables.yml --test-variable 'ODH_JUPYTERHUB_URL:${ODH_JUPYTERHUB_URL}' --test-variable RESOURCE_PATH:${PWD}/tests/Resources --test-variable JUPYTER_NOTEBOOK_PATH:${JUPYTER_NOTEBOOK_PATH} --test-variable GIT_REPO_URL:${GIT_REPO_URL}"
+    os::cmd::expect_success "run_robot_test.sh --test-artifact-dir ${ARTIFACT_DIR} --test-case ${MY_DIR}/../resources/ods-ci/integration-test-jupyter-git-notebook.robot --test-variables-file ${MY_DIR}/../resources/ods-ci/test-variables.yml --test-variable 'ODH_JUPYTERHUB_URL:${ODH_JUPYTERHUB_URL}' --test-variable RESOURCE_PATH:${PWD}/tests/Resources --test-variable 'JUPYTER_NOTEBOOK_PATH:${JUPYTER_NOTEBOOK_PATH}' --test-variable 'GIT_REPO_URL:${GIT_REPO_URL}'"
     popd
 }
 
