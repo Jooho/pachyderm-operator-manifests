@@ -10,6 +10,7 @@ Suite Teardown   End Web Test
 *** Variables ***
 ${ODH_JUPYTERHUB_URL}   https://jupyterhub-opendatahub-jupyterhub.apps.my-cluster.test.redhat.com
 ${GIT_REPO_URL}   https://github.com/Jooho/manifests-test
+#${JUPYTER_NOTEBOOK_PATH}   manifests-test/notebooks/pachyderm-opencv.ipynb
 ${JUPYTER_NOTEBOOK_PATH}   manifests-test/notebooks/tensorflow/TensorFlow-MNIST-Minimal.ipynb
 
 *** Test Cases ***
@@ -50,7 +51,7 @@ Can Launch Integration Test Notebook
 
   Capture Page Screenshot
 
-  Wait Until TensorFlow-MNIST-Minimal.ipynb JupyterLab Tab Is Selected
+  Wait Until pachyderm-opencv.ipynb JupyterLab Tab Is Selected
   Close Other JupyterLab Tabs
 
   Open With JupyterLab Menu  Run  Run All Cells

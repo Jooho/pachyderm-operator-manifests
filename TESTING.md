@@ -8,6 +8,9 @@ It has a integration test using RHODS jupyterhub so you need to install RHODS ad
 
 ## How to use
 ~~~
+# Clean pipeline that might be left
+$ pachctl delete pipeline edges
+
 # Build and Test
 $ make build run
 

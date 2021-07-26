@@ -34,7 +34,7 @@ TESTS_REGEX=
 # Jupyter Notebook
 # JUPYTER_NOTEBOOK_PATH should be like "${MANIFESTS_NAME}/notebooks/XXXX.ipynb"
 # default value: manifests-test/notebooks/tensorflow/TensorFlow-MNIST-Minimal.ipynb
-JUPYTER_NOTEBOOK_PATH=${MANIFESTS_NAME}/notebooks/pachyderm_opencv.ipynb
+JUPYTER_NOTEBOOK_PATH=${MANIFESTS_NAME}/notebooks/pachyderm-opencv.ipynb
 
 
 #---------------------------------------------
